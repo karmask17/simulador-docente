@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "titulo": "Preparing for the First Day of Class",
+    "narrativa": "Estás por iniciar clases como profesor(a) de {materia} en {nivel_educativo}. Tendrás un grupo de {numero_alumnos} estudiantes. Sabes que el primer día marcará la pauta. ¿Cómo preparas tu clase inicial?",
+    "opciones": {
+      "A": {
+        "texto": "Diseñas una sesión muy teórica para mostrar que dominas el contenido.",
+        "consecuencia": "El grupo se siente abrumado y participa poco.",
+        "retroalimentacion": "Es importante conectar con el grupo antes de profundizar en los contenidos. Mostrar empatía genera confianza.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Preparas actividades para conocer al grupo y que ellos te conozcan.",
+        "consecuencia": "Los estudiantes se sienten valorados y se genera un ambiente positivo.",
+        "retroalimentacion": "Crear vínculos desde el inicio fortalece el manejo del grupo y la motivación.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Usas un plan genérico con una presentación en PowerPoint y un resumen.",
+        "consecuencia": "La clase es poco memorable. Se mantiene el orden pero sin mucho interés.",
+        "retroalimentacion": "Personalizar tus sesiones al contexto real siempre tendrá mejores resultados que usar materiales genéricos.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "First Day of Class",
+    "narrativa": "Llegas al salón para tu primera clase. Los estudiantes están hablando, algunos usan el celular y no te prestan atención. ¿Qué haces?",
+    "opciones": {
+      "A": {
+        "texto": "Exiges silencio inmediato y comienzas a dictar reglas.",
+        "consecuencia": "Se impone respeto, pero el ambiente es rígido.",
+        "retroalimentacion": "La autoridad positiva se construye con firmeza y cercanía, no solo con imposición.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Saludas, haces contacto visual y propones una dinámica de presentación.",
+        "consecuencia": "Logras captar su atención y generar cercanía.",
+        "retroalimentacion": "Establecer el vínculo emocional fortalece tu liderazgo desde el inicio.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Esperas que se callen solos para empezar.",
+        "consecuencia": "El ruido continúa y pierdes credibilidad.",
+        "retroalimentacion": "Mostrar presencia docente clara desde el primer día marca una diferencia en la gestión del grupo.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "First Weeks of Class",
+    "narrativa": "Ya pasaron varias clases. Algunos estudiantes participan activamente, otros evitan hablar. Se aproxima tu primera clase de repaso. ¿Cómo la preparas?",
+    "opciones": {
+      "A": {
+        "texto": "Divides la clase en niveles y diseñas actividades diferenciadas.",
+        "consecuencia": "Mayor participación y enfoque. Cada estudiante se siente retado.",
+        "retroalimentacion": "Adaptar tus actividades a diferentes niveles favorece el aprendizaje significativo.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Das la misma actividad a todos y corriges en grupo.",
+        "consecuencia": "Algunos terminan rápido y se distraen. Otros se frustran.",
+        "retroalimentacion": "El mismo material no siempre funciona para todos los estudiantes.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Haces una dinámica competitiva sin explicar bien las reglas.",
+        "consecuencia": "La clase se vuelve caótica y algunos se molestan.",
+        "retroalimentacion": "Una dinámica sin estructura puede generar descontrol más que motivación.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Getting to Know Your Group",
+    "narrativa": "Llevas algunas clases con tu grupo. No conoces bien sus habilidades ni intereses. ¿Qué haces para conocerlos mejor?",
+    "opciones": {
+      "A": {
+        "texto": "Aplicas un test escrito sobre conocimientos previos y estilos de aprendizaje.",
+        "consecuencia": "Obtienes datos concretos, pero algunos estudiantes se estresan.",
+        "retroalimentacion": "La evaluación inicial es útil, pero debe generar confianza, no ansiedad.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Haces una dinámica de entrevistas entre ellos y compartes hallazgos.",
+        "consecuencia": "El ambiente se relaja y obtienes información útil.",
+        "retroalimentacion": "Las actividades colaborativas generan confianza y permiten conocer al grupo.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Observas su comportamiento y tomas notas sin intervenir.",
+        "consecuencia": "Obtienes una idea superficial que puede no ser precisa.",
+        "retroalimentacion": "Observar es útil, pero interactuar te da más información real.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Designing Routines",
+    "narrativa": "Cada clase toma tiempo en empezar. Hay desorden al repartir materiales. ¿Cómo abordas la situación?",
+    "opciones": {
+      "A": {
+        "texto": "Diseñas rutinas claras y las practican juntos.",
+        "consecuencia": "El grupo se organiza mejor y gana autonomía.",
+        "retroalimentacion": "Las rutinas bien implementadas ahorran tiempo y reducen el caos.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Escribes instrucciones en el pizarrón cada clase.",
+        "consecuencia": "Hay algo de mejora, pero debes repetir muchas cosas.",
+        "retroalimentacion": "La constancia en las rutinas es clave para que funcionen.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Confías en que los estudiantes se adaptarán solos.",
+        "consecuencia": "El desorden persiste y se pierde tiempo valioso.",
+        "retroalimentacion": "Sin estructura, los estudiantes no desarrollan autonomía.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "Classroom Rules",
+    "narrativa": "Algunos estudiantes interrumpen constantemente. Aún no hay reglas claras. ¿Qué haces?",
+    "opciones": {
+      "A": {
+        "texto": "Redactas tú solo las reglas y las colocas en el aula.",
+        "consecuencia": "Algunos las aceptan, otros las ignoran.",
+        "retroalimentacion": "Involucrar al grupo en las normas mejora la aceptación.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Dediques una sesión a construir normas con el grupo.",
+        "consecuencia": "El grupo se apropia de las normas y las respeta más.",
+        "retroalimentacion": "La construcción colectiva genera responsabilidad compartida.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Ignoras el problema esperando que mejore solo.",
+        "consecuencia": "La conducta empeora y tu autoridad se debilita.",
+        "retroalimentacion": "Evitar intervenir a tiempo puede generar problemas más grandes.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "Setting Objectives",
+    "narrativa": "Notas que tu grupo no sabe qué se espera ni para qué sirve lo que ven. ¿Cómo abordas los objetivos?",
+    "opciones": {
+      "A": {
+        "texto": "Explicas los objetivos al inicio de cada clase.",
+        "consecuencia": "Los alumnos enfocan mejor su trabajo.",
+        "retroalimentacion": "Los objetivos claros dan dirección al aprendizaje.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Haces una lluvia de ideas para definir metas del curso.",
+        "consecuencia": "Generas propósito colectivo, aunque algunos no se involucran.",
+        "retroalimentacion": "Incluir al grupo en los objetivos fomenta el compromiso.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "No hablas de objetivos porque crees que no lo entenderán.",
+        "consecuencia": "Continúa la apatía y la confusión.",
+        "retroalimentacion": "El propósito debe comunicarse claramente para que tenga sentido.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "Diagnostic Assessment",
+    "narrativa": "Debes entregar tu planeación pero aún no sabes el nivel real del grupo. ¿Qué haces?",
+    "opciones": {
+      "A": {
+        "texto": "Aplicas una prueba escrita sin avisar.",
+        "consecuencia": "Obtienes datos, pero generas ansiedad.",
+        "retroalimentacion": "El diagnóstico debe ser formativo, no punitivo.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Haces actividades prácticas y observas su desempeño.",
+        "consecuencia": "Obtienes un panorama real sin presión.",
+        "retroalimentacion": "Evaluar de forma natural puede ser más efectiva y confiable.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Te basas en tus impresiones.",
+        "consecuencia": "Puedes planear con errores de base.",
+        "retroalimentacion": "Planificar sin evidencia puede afectar todo el proceso.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 9,
+    "titulo": "Teacher's Emotional Management",
+    "narrativa": "Te sientes agotado/a por preparar clases. No puedes dormir y estás estresado/a. ¿Qué haces?",
+    "opciones": {
+      "A": {
+        "texto": "Sigues con el mismo ritmo esperando acostumbrarte.",
+        "consecuencia": "El agotamiento aumenta y afecta tu bienestar.",
+        "retroalimentacion": "Cuidarte también es parte de ser docente efectivo.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Pides consejos a colegas sobre organización.",
+        "consecuencia": "Mejoras tu gestión del tiempo y reduces el estrés.",
+        "retroalimentacion": "Compartir estrategias entre docentes puede ser muy valioso.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Te tomas una tarde libre para descansar.",
+        "consecuencia": "Recuperas energía, aunque sientes culpa.",
+        "retroalimentacion": "El descanso no es un lujo, es necesario para rendir bien.",
+        "impacto": ""
+      }
+    }
+  },
+  {
+    "id": 10,
+    "titulo": "First Contact with Parents",
+    "narrativa": "Tendrás tu primera reunión con padres. Algunos se ven preocupados, otros desinteresados. ¿Cómo te presentas?",
+    "opciones": {
+      "A": {
+        "texto": "Presentas el programa, reglas y tus exigencias.",
+        "consecuencia": "Se establece autoridad, pero puede parecer rígido.",
+        "retroalimentacion": "El equilibrio entre firmeza y apertura es clave en la comunicación.",
+        "impacto": ""
+      },
+      "B": {
+        "texto": "Compartes tus expectativas y das espacio a preguntas.",
+        "consecuencia": "Generas confianza y colaboración.",
+        "retroalimentacion": "La transparencia y la escucha activa fortalecen la relación con las familias.",
+        "impacto": ""
+      },
+      "C": {
+        "texto": "Solo das el horario y temario para evitar conflictos.",
+        "consecuencia": "Hay desinformación y posible descontento.",
+        "retroalimentacion": "Evitar el contacto no resuelve tensiones, solo las aplaza.",
+        "impacto": ""
+      }
+    }
+  }
+]
