@@ -1,4 +1,5 @@
-# simulador.py
+
+# Simulador Docente con Streamlit (versión bilingüe)
 import streamlit as st
 import json
 import os
@@ -7,6 +8,7 @@ from fpdf import FPDF
 st.set_page_config(page_title="Simulador Docente", layout="centered")
 st.title("🧑‍🏫 Simulador Docente")
 
+# Idioma
 idioma = st.radio("Elige tu idioma / Choose your language:", ("es", "en"))
 
 TEXTO = {
@@ -20,7 +22,8 @@ TEXTO = {
         "bueno": "Bueno",
         "aceptable": "Aceptable",
         "atencion": "Necesita atención",
-        "iniciar": "Iniciar Simulador"
+        "iniciar": "Iniciar Simulador",
+        "crear_perfil": "Crea tu perfil docente"
     },
     "en": {
         "resumen": "FINAL SUMMARY OF YOUR TEACHING EXPERIENCE",
@@ -32,7 +35,8 @@ TEXTO = {
         "bueno": "Good",
         "aceptable": "Acceptable",
         "atencion": "Needs attention",
-        "iniciar": "Start Simulator"
+        "iniciar": "Start Simulator",
+        "crear_perfil": "Create your teacher profile"
     }
 }[idioma]
 
@@ -86,23 +90,49 @@ def mostrar_resumen_final():
     with open("resumen_final.pdf", "rb") as f:
         st.download_button("📄 Descargar resumen en PDF", f, file_name="resumen_final.pdf")
 
-if st.button(TEXTO['iniciar']):
-    escenarios = cargar_escenarios()
-    for esc in escenarios:
-        st.subheader(esc['titulo'])
-        st.write(esc['narrativa'])
-        opciones = esc['opciones']
-        eleccion = st.radio("Selecciona una opción:", list(opciones.keys()), format_func=lambda k: opciones[k]['texto'], key=esc['id'])
+def personalizar_texto(texto, perfil):
+    for clave, valor in perfil.items():
+        texto = texto.replace(f"{{{clave}}}", str(valor))
+    return texto
 
-        if eleccion:
-            resultado = opciones[eleccion]
-            st.write("✏️ ", resultado['consecuencia'])
-            st.info("📚 " + resultado['retroalimentacion'])
-            st.write("📊 Impacto: ", resultado.get("impacto", "Sin cambios"))
+# Crear perfil docente
+st.header("📝 " + TEXTO['crear_perfil'])
+with st.form("perfil_form"):
+    materia = st.text_input("Materia / Subject")
+    nivel_educativo = st.selectbox("Nivel educativo / Educational level", ["Primaria", "Secundaria", "Preparatoria", "Universidad"])
+    numero_alumnos = st.slider("Número de alumnos / Number of students", 5, 60, 30)
+    experiencia = st.slider("Años de experiencia / Years of experience", 0, 30, 1)
+    enviar = st.form_submit_button("Guardar perfil")
 
-            if "mejora" in resultado['impacto'].lower() or "improves" in resultado['impacto'].lower():
-                indicadores['ambiente'] += 5
-            elif "aumenta la carga" in resultado['impacto'].lower() or "increases workload" in resultado['impacto'].lower():
-                indicadores['carga'] += 10
+perfil = {
+    "materia": materia,
+    "nivel_educativo": nivel_educativo,
+    "numero_alumnos": numero_alumnos,
+    "experiencia": experiencia
+}
 
-    mostrar_resumen_final()
+if enviar:
+    if st.button(TEXTO['iniciar']):
+        escenarios = cargar_escenarios()
+        for esc in escenarios:
+            st.subheader(esc['titulo'])
+            narrativa = personalizar_texto(esc['narrativa'], perfil)
+            st.write(narrativa)
+            opciones = esc['opciones']
+            eleccion = st.radio("Selecciona una opción:", list(opciones.keys()), format_func=lambda k: opciones[k]['texto'], key=esc['id'])
+
+            if eleccion:
+                resultado = opciones[eleccion]
+                st.write("✏️ ", resultado['consecuencia'])
+                st.info("📚 " + resultado['retroalimentacion'])
+                st.write("📊 Impacto: ", resultado.get("impacto", "Sin cambios"))
+
+                impacto = resultado.get("impacto", "")
+                if isinstance(impacto, str):
+                    impacto_lower = impacto.lower()
+                    if "mejora" in impacto_lower or "improves" in impacto_lower:
+                        indicadores["ambiente"] += 5
+                    elif "aumenta la carga" in impacto_lower or "increases workload" in impacto_lower:
+                        indicadores["carga"] += 10
+
+        mostrar_resumen_final()
